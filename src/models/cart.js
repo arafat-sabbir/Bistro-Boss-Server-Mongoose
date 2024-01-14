@@ -1,3 +1,4 @@
+const { ObjectId } = require("mongodb");
 const { Schema, model } = require("mongoose");
 
 const AllCartSchema = new Schema({
@@ -21,7 +22,7 @@ const AllCartSchema = new Schema({
     type: Number,
     require: true,
   },
-},{collation:'carts'});
+},{collection:'carts'});
 
 const Cart = model('carts',AllCartSchema)
 module.exports = Cart;
